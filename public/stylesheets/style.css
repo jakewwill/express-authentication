@@ -1,0 +1,39 @@
+/* Users Table Styling*/
+.users_table {
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 8px;
+	border-collapse: separate;
+    border-spacing: 0px;
+    padding: 0;
+}
+
+.users_table tr:nth-child(even) {
+	background-color: #eee;
+}
+
+.users_table th, tr, td {
+	padding: 8px;
+	margin: 0;
+	text-align: left;
+}
+
+.users_table th {
+	background-color: #eee;
+}
+
+#td-left {
+	border-radius: 0 0 0 8px;
+}
+
+#td-right {
+	border-radius: 0 0 8px 0;
+}
+
+#th-left {
+	border-radius: 8px 0 0 0;
+}
+
+#th-right {
+	border-radius: 0 8px 0 0;
+}

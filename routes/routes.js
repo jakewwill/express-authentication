@@ -2,7 +2,6 @@ var express = require('express');
 var mysql = require('mysql');
 var dbconfig = require('../config/database');
 
-
 module.exports = function(app, passport) {
 	app.get('/', function(req, res) {
 		// Save any passed messages, then set the session message to null

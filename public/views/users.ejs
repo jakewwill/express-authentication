@@ -1,26 +1,35 @@
-<link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
+<html>
+	<head>
+		<link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
+	</head>
 
-<table class="users_table">
-	<div class="row" style="text-align: center; margin-bottom: 10px">
-		<h1 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 63px; font-weight: 500; margin: 0">Users Table</h1>
-	</div>
-	<thead>
-		<tr>
-			<th id="th-left" style="width: 25%">Username</th>
-			<th id="th-right">Password Hash</th>
-		</tr>
-	</thead>
-	<tbody>
-	<% for (var i = 0; i < userList.length; i++) { %>
+	<body>
+		<table class="users_table">
+		<div class="row" style="text-align: center; margin-bottom: 10px">
+			<h1 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 63px; font-weight: 500; margin: 0">Users Table</h1>
+		</div>
+		<thead>
 			<tr>
-				<% if (i == userList.length - 1) { %>
-					<td id="td-left"><%= userList[i].username %></td>
-					<td id="td-right"><%= userList[i].password %></td>
-				<% } else { %>
-					<td><%= userList[i].username %></td>
-					<td><%= userList[i].password %></td>
-				<% } %>
+				<th id="th-left">Username</th>
+				<th id="th-right">Password Hash</th>
 			</tr>
-	<% } %>
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+		<% for (var i = 0; i < userList.length; i++) { %>
+				<tr>
+					<% if (i == userList.length - 1) { %>
+						<td id="td-left"><%= userList[i].username %></td>
+						<td id="td-right"><%= userList[i].password %></td>
+					<% } else { %>
+						<td><%= userList[i].username %></td>
+						<td><%= userList[i].password %></td>
+					<% } %>
+				</tr>
+		<% } %>
+		</tbody>
+	</table>
+	</body>
+</html>
+
+
+

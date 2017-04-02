@@ -68,9 +68,9 @@ module.exports = function(passport) {
             connection.query("SELECT * FROM users WHERE username = ?",[username], function(err, rows){
                 if (err)
                     return done(err);
-                if (!rows.length) {
-                    return done(null, false, req.flash('loginMessage', 'No user found.')); // req.flash is the way to set flashdata using connect-flash
-                }
+
+                if (!rows.length) 
+                    return done(null, false, req.flash('loginMessage', 'No user found.')); // req.flash is the way to set flashdata using connect-flash                
 
                 // If the user is found but the password is wrong
                 if (!bcrypt.compareSync(password, rows[0].password))

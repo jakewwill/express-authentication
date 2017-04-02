@@ -1,3 +1,7 @@
+body {
+	padding-top: 80px;
+}
+
 /* Users Table Styling*/
 .users_table {
 	width: 100%;
@@ -23,6 +27,7 @@
 }
 
 #td-left {
+	width: 25%;
 	border-radius: 0 0 0 8px;
 }
 

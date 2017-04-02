@@ -23,7 +23,6 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');  
 app.set('views', __dirname + '/public/views');
 
-
 // required for passport
 app.use(session({
 	secret: 'superdupersecretmessage',

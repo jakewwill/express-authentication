@@ -35,7 +35,8 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 var routes = require('./routes/routes.js')(app, passport)
+var port = process.env.PORT || 8888;
 
-app.listen(8888, function () {
-  console.log('Example app listening on port 8888!')
+app.listen(port, function () {
+  console.log('Example app listening on port ' + port);
 })
